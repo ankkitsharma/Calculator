@@ -9,6 +9,7 @@ let num1;
 let num2;
 let opr; //operator
 
+//operation function
 const operate = (num1, num2, opr) => {
     switch (opr) {
         case "+":
@@ -28,3 +29,16 @@ const operate = (num1, num2, opr) => {
             break;
     }
 }
+
+//dom elements
+const buttons = document.querySelector(".buttons");
+
+//create grid
+let divs = [];
+for(let i = 0; i < 20; i++) {
+    divs[i] = document.createElement("div");
+    buttons.appendChild(divs[i]);
+    divs[i].style.cssText = `width: calc((${100}%/${4}) - 10px); height: calc((${100}%/${5}) - 10px);`;
+    divs[i].classList.toggle("gStyle");
+}
+

@@ -34,11 +34,14 @@ const operate = (num1, num2, opr) => {
 const buttons = document.querySelector(".buttons");
 
 //create grid
-let divs = [];
-for(let i = 0; i < 20; i++) {
-    divs[i] = document.createElement("div");
-    buttons.appendChild(divs[i]);
-    divs[i].style.cssText = `width: calc((${100}%/${4}) - 10px); height: calc((${100}%/${5}) - 10px);`;
-    divs[i].classList.toggle("gStyle");
-}
+// let divs = [];
+// for(let i = 0; i < 16; i++) {
+//     divs[i] = document.createElement("div");
+//     buttons.appendChild(divs[i]);
+//     divs[i].style.cssText = `width: calc((${100}%/${4}) - 12px); height: calc((${100}%/${4})- 12px);`;
+//     divs[i].classList.toggle("gStyle");
+// }
+
+//populate grid buttons
+// divs[0].textContent = "AC";
 

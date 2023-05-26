@@ -21,6 +21,16 @@ body {
     background-color: rgb(65, 61, 61);
     margin-top: 10px;
     border-radius: 15px;
+    display: flex;
+    flex-direction: row-reverse;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.screenText {
+    font-size: 30px;
+    color: rgb(182, 168, 168);
+    padding: 0 20px 0 20px;
 }
 
 .buttons {

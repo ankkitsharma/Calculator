@@ -75,7 +75,7 @@ buttons.forEach(button => {
             display();     
         }
         else if(button.className.includes("dot")) {
-            inputDot();
+            inputOprd(button.textContent);
             display();     
         }
     });
@@ -90,20 +90,42 @@ function inputOprd(operand) {
         num2 += operand;
         displayValue = num1 + opr + num2;
     }
-    // displayValue = "";
-    // displayValue += operand;
 }
 
 function inputOprt(operator) {
-    if(opr === null) {
+    if(num1 === "") {
+        num1 += operator;
+        displayValue = num1;
+    }
+    else if(opr === null) {
         opr = operator;
         displayValue = num1 + opr;
     }
-    else {
+    else if(opr !== null && num2 === "") {
+        num2 += operator;
+        displayValue = num1 + opr + num2;
+    }
+    else if(opr !== null && num2 !== "") {
         num1 = operate(Number(num1), Number(num2), opr);
         num2 = "";
         opr = operator;
         displayValue = num1 + opr;
     }
+}
+
+function Equal() {
+    if(opr !== null) {
+        num1 = operate(Number(num1), Number(num2), opr);
+        num2 = "";
+        opr = null;
+        displayValue = num1;
+    }
+}
+
+function AC() {
+    num1 = "";
+    num2 = "";
+    opr = null;
+    displayValue = "";
 }
 

@@ -41,13 +41,8 @@ let displayValue = "";
 const disp = document.querySelector(".screenText");
 
 function display() {
-    
+    // if(displayValue.length )
     disp.textContent = displayValue;
-}
-// display();
-//clear display function
-function clearDisplay() {
-    displayValue = "";
 }
 
 //button click
@@ -105,6 +100,10 @@ function inputOprt(operator) {
         num2 += operator;
         displayValue = num1 + opr + num2;
     }
+    else if(opr !== null && num2 === "0"){
+        displayValue = num1 + opr + num2;
+        alert("Can't divide by zero!");
+    }
     else if(opr !== null && num2 !== "") {
         num1 = operate(Number(num1), Number(num2), opr);
         num2 = "";
@@ -114,7 +113,11 @@ function inputOprt(operator) {
 }
 
 function Equal() {
-    if(opr !== null) {
+    if(num2 === "0") {
+        displayValue = num1 + opr + num2;
+        alert("Can't divide by zero!");
+    }
+    else if(opr !== null) {
         num1 = operate(Number(num1), Number(num2), opr);
         num2 = "";
         opr = null;

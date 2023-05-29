@@ -70,7 +70,8 @@ buttons.forEach(button => {
             display();
         }
         else if (button.className.includes("dot")) {
-            inputOprd(button.textContent);
+            // inputOprd(button.textContent);
+            inputDot();
             display();
         }
     });
@@ -147,3 +148,14 @@ function CL() {
     }
 }
 
+
+function inputDot() {
+    if((opr === null) && !(num1.toString().includes(".")) ) {
+        num1 += ".";
+        displayValue = num1;
+    }
+    else if((opr !== null) && !(num2.toString().includes("."))) {
+        num2 += ".";
+        displayValue = num1 + opr + num2;
+    }
+}

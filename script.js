@@ -129,3 +129,18 @@ function AC() {
     displayValue = "";
 }
 
+function CL() {
+    if(num2 !== "") {
+        num2 = "";
+        displayValue = num1 + opr;
+    }
+    else if(opr !== null && num2 === ""){
+        opr = null;
+        displayValue = num1;
+    }
+    else {
+        num1 = "";
+        displayValue = "";
+    }
+}
+

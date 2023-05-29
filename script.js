@@ -1,8 +1,8 @@
 //arithmetic functions
 const add = (num1, num2) => num1 + num2;
 const subtract = (num1, num2) => num1 - num2;
-const product = (num1, num2) => num1*num2;
-const divide = (num1, num2) => num1/num2;
+const product = (num1, num2) => num1 * num2;
+const divide = (num1, num2) => num1 / num2;
 
 //operation variables
 let num1 = "";
@@ -15,7 +15,7 @@ const operate = (num1, num2, opr) => {
         case "+":
             return add(num1, num2);
             break;
-        
+
         case "-":
             return subtract(num1, num2);
             break;
@@ -41,37 +41,37 @@ let displayValue = "";
 const disp = document.querySelector(".screenText");
 
 function display() {
-    // if(displayValue.length )
     disp.textContent = displayValue;
+
 }
 
 //button click
 buttons.forEach(button => {
     button.addEventListener("click", () => {
-        if(button.className.includes("oprd")) {
-            
+        if (button.className.includes("oprd")) {
+
             inputOprd(button.textContent);
             display();
         }
-        else if(button.className.includes("oprt")) {
+        else if (button.className.includes("oprt")) {
             inputOprt(button.textContent.toString());
             display();
         }
-        else if(button.className.includes("equal")) {
+        else if (button.className.includes("equal")) {
             Equal();
-            display();     
+            display();
         }
-        else if(button.className.includes("ac")) {
+        else if (button.className.includes("ac")) {
             AC();
-            display();    
+            display();
         }
-        else if(button.className.includes("cl")) {
+        else if (button.className.includes("cl")) {
             CL();
-            display();     
+            display();
         }
-        else if(button.className.includes("dot")) {
+        else if (button.className.includes("dot")) {
             inputOprd(button.textContent);
-            display();     
+            display();
         }
     });
 });
@@ -88,24 +88,24 @@ function inputOprd(operand) {
 }
 
 function inputOprt(operator) {
-    if(num1 === "") {
+    if (num1 === "") {
         num1 += operator;
         displayValue = num1;
     }
-    else if(opr === null) {
+    else if (opr === null) {
         opr = operator;
         displayValue = num1 + opr;
     }
-    else if(opr !== null && num2 === "") {
+    else if (opr !== null && num2 === "") {
         num2 += operator;
         displayValue = num1 + opr + num2;
     }
-    else if(opr !== null && num2 === "0"){
+    else if (opr !== null && num2 === "0") {
         displayValue = num1 + opr + num2;
         alert("Can't divide by zero!");
     }
-    else if(opr !== null && num2 !== "") {
-        num1 = operate(Number(num1), Number(num2), opr);
+    else if (opr !== null && num2 !== "") {
+        num1 = Math.round(operate(Number(num1), Number(num2), opr) * 10000) / 10000;
         num2 = "";
         opr = operator;
         displayValue = num1 + opr;
@@ -113,12 +113,12 @@ function inputOprt(operator) {
 }
 
 function Equal() {
-    if(num2 === "0") {
+    if (num2 === "0") {
         displayValue = num1 + opr + num2;
         alert("Can't divide by zero!");
     }
-    else if(opr !== null) {
-        num1 = operate(Number(num1), Number(num2), opr);
+    else if (opr !== null) {
+        num1 = Math.round(operate(Number(num1), Number(num2), opr) * 10000) / 10000;
         num2 = "";
         opr = null;
         displayValue = num1;
@@ -133,11 +133,11 @@ function AC() {
 }
 
 function CL() {
-    if(num2 !== "") {
+    if (num2 !== "") {
         num2 = "";
         displayValue = num1 + opr;
     }
-    else if(opr !== null && num2 === ""){
+    else if (opr !== null && num2 === "") {
         opr = null;
         displayValue = num1;
     }

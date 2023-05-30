@@ -21,7 +21,6 @@ body {
 .screen {
     height: 220px;
     width: 360px;
-    /* background-color: rgb(65, 61, 61); */
     background-color: rgb(76 73 73);
     margin-top: 10px;
     margin-bottom: auto;
@@ -45,14 +44,12 @@ body {
     width: 360px;
     display: flex;
     flex-wrap: wrap;
-    /* gap: 10px; */
 }
 
 .gStyle {
     background-color: rgb(34, 33, 33);
     margin: 6px;
     border-radius: 15px;
-    /* color: white; */
     color: white;
     display: flex;
     align-items: center;

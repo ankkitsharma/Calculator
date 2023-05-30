@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
+    <title>Calc Man</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
@@ -12,27 +12,29 @@
         <div class="screen">
             <p class="screenText"></p>
         </div>
+        <div class="title">Calc Man</div>
         <div class="buttons">
-            <div class="gStyle ac">AC</div>
-            <div class="gStyle cl">CL</div>
-            <div class="gStyle seven oprd">7</div>
-            <div class="gStyle eight oprd">8</div>
-            <div class="gStyle nine oprd">9</div>
-            <div class="gStyle plus oprt">+</div>
-            <div class="gStyle four oprd">4</div>
-            <div class="gStyle five oprd">5</div>
-            <div class="gStyle six oprd">6</div>
-            <div class="gStyle minus oprt">-</div>
-            <div class="gStyle one oprd">1</div>
-            <div class="gStyle two oprd">2</div>
-            <div class="gStyle three oprd">3</div>
-            <div class="gStyle intoo oprt">*</div>
-            <div class="gStyle dot">.</div>
-            <div class="gStyle zero oprd">0</div>
-            <div class="gStyle equal">=</div>
-            <div class="gStyle divide oprt">/</div>
+            <button class="gStyle ac" data-key="Escape">AC</button>
+            <button class="gStyle cl" data-key="Backspace">C</button>
+            <button class="gStyle seven oprd" data-key="7">7</button>
+            <button class="gStyle eight oprd" data-key="8">8</button>
+            <button class="gStyle nine oprd" data-key="9">9</button>
+            <button class="gStyle plus oprt clr" data-key="+">+</button>
+            <button class="gStyle four oprd" data-key="4">4</button>
+            <button class="gStyle five oprd" data-key="5">5</button>
+            <button class="gStyle six oprd" data-key="6">6</button>
+            <button class="gStyle minus oprt clr" data-key="-">-</button>
+            <button class="gStyle one oprd" data-key="1">1</button>
+            <button class="gStyle two oprd" data-key="2">2</button>
+            <button class="gStyle three oprd" data-key="3">3</button>
+            <button class="gStyle intoo oprt clr" data-key="*">*</button>
+            <button class="gStyle dot blu" data-key=".">.</button>
+            <button class="gStyle zero oprd" data-key="0">0</button>
+            <button class="gStyle equal blu" data-key="Enter">=</button>
+            <button class="gStyle divide oprt clr" data-key="/">/</button>
         </div>
     </div>
+    <div class="footer"><a href="https://github.com/ankkitsharma/Calculator">ankkitsharma © 2023</a></div>
 
     <script src="./script.js"></script>
 </body>

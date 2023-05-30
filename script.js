@@ -70,13 +70,19 @@ buttons.forEach(button => {
             display();
         }
         else if (button.className.includes("dot")) {
-            // inputOprd(button.textContent);
             inputDot();
             display();
         }
     });
 });
 
+//keyboard support
+window.addEventListener('keydown', function(e){
+    const key = document.querySelector(`button[data-key='${e.key}']`);
+    key.click();
+});
+
+//operator functions
 function inputOprd(operand) {
     if(opr === null) {
         num1 += operand;
